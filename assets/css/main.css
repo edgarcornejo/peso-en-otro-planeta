@@ -1,5 +1,5 @@
 body {
-  background: center center no-repeat url("/assets/img/fondo.jpg");
+  background: center center no-repeat url("https://images.unsplash.com/photo-1506272517965-ec6133efee7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
   background-size: 100% auto;
   background-color: #000;
   color: #fff;
