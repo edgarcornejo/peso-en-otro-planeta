@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;700&display=swap')
+@import "normalize.styl"
+
+/* Colors */
+WdarkBack = #1f1a24
+Wwhite = #f2e7fe
+
+body
+  background center center no-repeat url("https://images.unsplash.com/photo-1506272517965-ec6133efee7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80")
+  background-size cover
+  background-color WdarkBack
+  color Wwhite
+  font-family 'Barlow Semi Condensed', sans-serif
+
+header, section
+  text-align center 
+  max-width 1366px
+  width 90%
+  height auto
+  margin 0 auto
+  padding 60px 0 50px 0
+  background rgba(32,26,36,0.8)
+  backdrop-filter blur(5px)
+  h1
+    font-weight 700
+    font-size 3rem
+  h2
+    font-size 1.5rem
+    font-weight 200
+    letter-spacing 2pt
+  p
+    font-size 1.2rem
+    line-height 1.6rem
+    padding 20px 0 20px 0
+  #resultado
+    font-size 2rem
+
+form
+  max-width 360px
+  margin 0 auto
+  .validanumericos, select, #btn_calcular
+    border-radius 5px
+    font-weight 700
+  #btn_calcular
+    width 50%
+    height 2em
+    border 0
+    margin-top 1rem
+    font-weight 700
+    letter-spacing 1pt
+    &:hover
+      cursor pointer
+
+footer
+  padding 2rem 0 2rem 0
+  text-align center
+  a
+    color #77d9ff

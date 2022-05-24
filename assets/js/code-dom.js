@@ -5,10 +5,9 @@ console.log(vent);
 document.write("Estas en: " + ruta.origin);*/
 
 /*Form*/
-var texto = document.getElementById("txt_edad");
+var texto = document.getElementById("txt_line");
 var boton = document.getElementById("btn_pro");
 boton.addEventListener("click", dibujo_click);
-
 
 var d = document.getElementById("dibujito");
 var ancho = d.width;
@@ -69,7 +68,6 @@ for (l = 0; l < lineas; l++) {
   dibujarLinea(colorcito, yi, 0, 300, xfi);
 }*/
 
-
 /*Lineas Horizontales y verticales en repetición
 for (l = 0; l < lineas; l++)
 {
@@ -85,15 +83,12 @@ dibujarLinea(colorcito, 1, 299, 299, 299);
 dibujarLinea(colorcito, 1, 1, 299, 1);
 dibujarLinea(colorcito, 299, 1, 299, 299);*/
 
-
-
-/*Iniciar funcion click
-function dibujo_click()
-{
+/*Iniciar funcion click*/
+function dibujo_click() {
   var lineas = parseInt(texto.value);
   var l = 0;
   var yi, xf;
-  var colorcito = "olive";
+  var colorcito = "skyblue";
   var espacio = ancho / lineas;
 
   for (l = 0; l < lineas; l++) {
@@ -101,7 +96,7 @@ function dibujo_click()
     xf = espacio * (l + 1);
     dibujarLinea(colorcito, 0, yi, xf, ancho);
   }
+
+  document.getElementById("txt_line").value = "";
+  var colorcito = "white";
 }
-*/
-
-
