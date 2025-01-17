@@ -1,58 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;700&display=swap')
-@import "normalize.styl"
+@charset "utf-8"
+
+@import "reset.styl"
+
+@font-face
+  font-family "Barlow Semi Condensed"
+  font-style normal
+  font-weight 200
+  font-display swap
+  src url("../../static/fonts/barlow-semi-condensed-200.woff2") format("woff2")
+
+@font-face
+  font-family "Barlow Semi Condensed"
+  font-style normal
+  font-weight 700
+  font-display swap
+  src url("../../static/fonts/barlow-semi-condensed-700.woff2") format("woff2")
+
+@font-face
+  font-family "DS-Digital"
+  font-style normal
+  font-weight 800
+  font-display swap
+  src url("../../static/fonts/ds-digital.ttf") format("truetype")
 
 /* Colors */
 WdarkBack = #1f1a24
-Wwhite = #f2e7fe
+Wwhite = #f2f2f2
 
 body
   background center center no-repeat url("https://images.unsplash.com/photo-1506272517965-ec6133efee7a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80")
   background-size cover
+  background-attachment fixed
   background-color WdarkBack
   color Wwhite
   font-family 'Barlow Semi Condensed', sans-serif
+  font-size clamp(16px, 1vw, 1vw)
+  font-weight 200
+  width 100%
+  min-height 100vh
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  gap 2rem
 
-header, section
-  text-align center 
-  max-width 1366px
-  width 90%
-  height auto
-  margin 0 auto
-  padding 60px 0 50px 0
-  background rgba(32,26,36,0.8)
-  backdrop-filter blur(5px)
+header
+  text-align center
+  backdrop-filter blur(8px)
+  padding 1rem
   h1
     font-weight 700
-    font-size 3rem
   h2
-    font-size 1.5rem
     font-weight 200
-    letter-spacing 2pt
-  p
-    font-size 1.2rem
-    line-height 1.6rem
-    padding 20px 0 20px 0
-  #resultado
-    font-size 2rem
+
+main
+  width 70%
+
+section
+  background: linear-gradient(135deg, rgba(242, 242, 242, 0.8) 0%, #abd3ee 50%, #89c3eb 51%,rgba(242, 242, 242, 0.8) 100%);
+  color WdarkBack
+  border-radius 1vw
+  padding clamp(24px, 2vw, 2vw)
+  backdrop-filter blur(5px)
+  box-shadow 0 0 10px rgba(0,0,0,0.5)
+  outline 1vw solid rgba(242, 242, 242, 0.4)
 
 form
-  max-width 360px
-  margin 0 auto
-  .validanumericos, select, #btn_calcular
-    border-radius 5px
-    font-weight 700
-  #btn_calcular
-    width 50%
-    height 2em
-    border 0
-    margin-top 1rem
+  margin 1rem 0 2rem 0
+  display flex
+  flex-direction column
+  align-items center
+  gap 1rem
+  label
     font-weight 700
     letter-spacing 1pt
-    &:hover
-      cursor pointer
+    opacity .7
+  input
+    width 80%
+    border-radius 5px
+    font-size clamp(36px, 3vw, 3vw)
+    height 4vw
+    font-family "DS-Digital"
+    text-align right 
+    border 0
+    background: linear-gradient(135deg, Wwhite 0%, darkgrey 50%, gray 51%,Wwhite 100%);
+    outline .6vw solid rgba(242, 242, 242, 0.4)
+    padding 1rem
+    &:focus,&:hover
+      outline solid 2px #7071d8
+      color #7071d8
+      text-shadow: 0 0 4px #7071d8
+      background Wwhite
+  select
+    border 0
+    padding .8rem
+    font-size clamp(18px, 1vw, 1vw)
+    font-weight 700
+    letter-spacing 1pt
+    border-radius 5px
+    background rgba(242, 242, 242, 0.8)
+    option
+      font-weight 700
+    &:focus
+      outline 0
+
+#resultado
+  text-align right
+  opacity .7
+  font-size 1.6rem
+  font-weight 700
+  padding 20px 0 20px 0
 
 footer
   padding 2rem 0 2rem 0
   text-align center
   a
-    color #77d9ff
+    color Wwhite
