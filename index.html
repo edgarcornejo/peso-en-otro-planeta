@@ -5,23 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cuanto pesas en otro planeta</title>
 
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/main.css">
-
 </head>
 <body>
   <header>
-    <h1>Cuanto pesas en otro planeta</h1>
-    <h2>Tú peso varia según la <strong><sub>gravedad</sub></strong> del planeta</h2>
+    <hgroup>
+      <h1>Cuanto pesas en otro planeta</h1>
+      <h2>Tú peso varia según la <strong><sub>gravedad</sub></strong> del planeta</h2>
+      <h3>Ingresa tú peso y selecciona el planeta, para saber tú peso en ese planta.</h3>
+    </hgroup>
   </header>
 
   <main>
     <section>
       <form action="">
-        <label>Ingresa tú peso y selecciona el planeta, para saber tú peso en ese planta.</label>
         <input type="text" class="validanumericos" placeholder="00.0" id="txt_peso" required/>
         
-        <select name="planet" id="planetas">
-          <option value="0">Planeta</option>
+        <select name="planet" class="planet" id="planetas" aria-label="Planetas:">
+          <button>
+            <selectedcontent></selectedcontent>
+            <span class="arrow"></span>
+          </button>
+          <option value="0"><span>Planetas</span></option>
           <option value="3.7">Mercurio</option>
           <option value="8.87">Venus</option>
           <option value="9.8">Tierra</option>

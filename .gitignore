@@ -1,6 +1,5 @@
-#Prepros
-.config
+# Prepros
+prepros.config
 
-#Vscode
-.vscode
-
+# Vscode
+.vscode/*
